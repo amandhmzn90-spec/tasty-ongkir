@@ -9,6 +9,11 @@ client = serpapi.Client(api_key="3e4229f21d41a3441247e3feba3e654e1506ca24a86d46c
 
 START_ADDR = "Lalu Thrift, Jl. Wijaya Kusuma, Joho, Sumberejo, Kec. Ngasem, Kabupaten Kediri, Jawa Timur 64182"
 
+
+@app.route("/")
+def hello():
+    return {"message": "Hello!"}
+
 @app.route('/ongkir', methods=['POST'])
 def hitung_ongkir():
     data = request.json
